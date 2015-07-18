@@ -1,0 +1,174 @@
+ALTER TABLE ordermasters DROP billing_country;
+ALTER TABLE ordermasters DROP shipping_country;
+ALTER TABLE `orders` CHANGE `user_id` `user_id` VARCHAR( 25 ) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL;
+ALTER TABLE `orders` CHANGE `product_id` `product_id` VARCHAR( 255 ) NOT NULL;
+ALTER TABLE `orders` CHANGE `add_on_id` `add_on_id` VARCHAR( 255 ) NOT NULL;
+ALTER TABLE `orders` CHANGE `vendor_id` `vendor_id` VARCHAR( 255 ) NOT NULL;
+ALTER TABLE `orders` CHANGE `quantity` `quantity` VARCHAR( 255 ) NOT NULL;
+
+*/30 * * * * php filepath /dev/null 2>&1
+
+ALTER TABLE `orders` ADD `delivery_date` VARCHAR( 255 ) NULL AFTER `process`;
+ALTER TABLE `coupons` ADD `batchuniqid` VARCHAR( 255 ) NULL AFTER `status`;
+ALTER TABLE `coupons` ADD `min_val` VARCHAR( 255 ) NULL AFTER `status`;
+ALTER TABLE `users` ADD `uniq_ven_id` VARCHAR( 25 ) NULL AFTER `id`;
+ALTER TABLE `orders` ADD `notification` TINYINT( 1 ) NOT NULL DEFAULT '1' AFTER `delivery_date`;
+
+INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES (NULL, 'Cake', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+
+
+INSERT INTO `users` (`id`, `uniq_ven_id`, `firstname`, `lastname`, `username`, `password`, `address`, `email`, `phone`, `isVendor`, `isSuper`, `status`, `created_at`, `updated_at`, `remember_token`) VALUES
+(31, 'CAHM001', 'Bakers', 'Den', 'CAHM001', '$2y$10$3fcZJ1lZAdd18ooLHf73TeXI75T53E8D2wdxg7HUgaHi8KfIvY.UW', '', '', '', 1, 0, 'active', '2014-12-01 21:04:12', '2014-12-01 21:04:12', NULL),
+(32, 'CBAN001', 'Iyengars', 'Bakery', 'CBAN001', '$2y$10$8JoaHdj2WD8XFkhxNCOvQuAk/L3ocY/okSimhJYZXSDEDrn2Oo.Ym', '', '', '', 1, 0, 'active', '2014-12-01 21:06:08', '2014-12-01 21:06:08', NULL),
+(33, 'CCHA001', 'Chocoholik', '', 'CCHA001', '$2y$10$.ORpgEJcmn3G/ScHSLnEjuqyjC3FZkX6g0ZqvcikoUgtyb7L848LC', '', '', '', 1, 0, 'active', '2014-12-01 21:07:35', '2014-12-01 21:07:35', NULL),
+(34, 'CIND001', 'Cake', '365', 'CIND001', '$2y$10$her10H05mozRKjC17hMX0O9ZZnom7rXXH4QBV8CTM5A.YLP.Idb.y', '', '', '', 1, 0, 'active', '2014-12-01 21:08:05', '2014-12-01 21:08:05', NULL),
+(35, 'CJAL001', 'Parveen', 'bakery', 'CJAL001', '$2y$10$wLKPhWQ3pwBbyptsF.N8J.yS8qtgG9iDRAn3RBsFumv2BLINunW9K', '', '', '', 1, 0, 'active', '2014-12-01 21:08:37', '2014-12-01 21:08:37', NULL),
+(36, 'CKOL001', 'New', 'Grissini', 'CKOL001', '$2y$10$MuEgP/113Yq.p/xjhOxIf.2UDau72yd.fJABSd.2ono3wYghyHVvm', '', '', '', 1, 0, 'active', '2014-12-01 21:09:09', '2014-12-01 21:09:09', NULL),
+(37, 'CLUC001', 'Bake', 'N Bite', 'CLUC001', '$2y$10$9kgTKUvyEFTZzeLEdiwPF.rNtYDWIpK4GuUqiw6UiQNEpYwOVdha.', '', '', '', 1, 0, 'active', '2014-12-01 21:09:41', '2014-12-01 21:09:41', NULL),
+(38, 'CPUN001', 'The Cake', 'and Cream Factory', 'CPUN001', '$2y$10$BQuv8Kpj6oi2Z0R90YyuaeVKODTLQ6L/CiUNOI1nl2yrnahQ8pHpe', '', '', '', 1, 0, 'active', '2014-12-01 21:10:22', '2014-12-01 21:10:22', NULL),
+(39, 'CBHO001', 'Sanjay', 'fresh bake', 'CBHO001', '$2y$10$3eWwESc82CErDPPcSwZmyuxbLmdZVub9AG4RxGEGhe5zR8RPvcltO', '', '', '', 1, 0, 'active', '2014-12-01 21:10:57', '2014-12-01 21:10:57', NULL),
+(40, 'CBHU001', 'Paris', 'Bakery', 'CBHU001', '$2y$10$VudGLHDm0D4BXdcObZjsd.9eZy.Oz10pfBFaDrpJfqSsVVsO3XiWG', '', '', '', 1, 0, 'active', '2014-12-01 21:11:29', '2014-12-01 21:11:29', NULL);
+
+ALTER TABLE `orders` ADD `disc_code` VARCHAR( 155 ) NULL AFTER `notification`;
+ALTER TABLE `ordermasters` ADD `disc_code` VARCHAR( 155 ) NULL AFTER `bill_value`;
+
+/*******************/
+tags update 
+/*******************/
+
+update products set tags =  'aniversary,gws,birthday,congrats,thankyou,handbouquet,valentines' where id = 1;
+
+update products set tags =  'aniversary,valentines,sorry,gws,birthday,loveromance,congratulations,handbouquet,thankyou' where id = 2;
+
+update products set tags =  'aniversary,valentines,sorry,gws,birthday,loveromance,congratulations,handbouquet,thankyou' where id = 3;
+
+update products set tags =  'aniversary,valentines,sorry,gws,birthday,loveromance,congratulations,handbouquet,sympathy,thankyou' where id = 4;
+
+update products set tags =  'aniversary,valentines,sorry,gws,birthday,loveromance,congratulations,handbouquet,thankyou' where id = 5;
+
+update products set tags =  'aniversary,valentines,sorry,gws,birthday,loveromance,congratulations,handbouquet,thankyou' where id = 6;
+
+update products set tags =  'aniversary,valentines,sorry,gws,birthday,loveromance,congratulations,handbouquet,sympathy,thankyou' where id = 7;
+
+update products set tags =  'valentines,sorry,gws,birthday,loveromance,congratulations,handbouquet,sympathy,thankyou' where id = 8;
+
+update products set tags =  'aniversary,valentines,sorry,gws,birthday,loveromance,congratulations,sympathy,thankyou' where id = 9;
+
+update products set tags =  'aniversary,valentines,sorry,gws,birthday,loveromance,congratulations,thankyou' where id = 10;
+
+update products set tags =  'aniversary,valentines,gws,birthday,loveromance,congratulations,handbouquet,thankyou' where id = 11;
+
+update products set tags =  'aniversary,valentines,sorry,gws,birthday,loveromance,congratulations,handbouquet,thankyou' where id = 12;
+
+update products set tags =  'valentines,sorry,gws,birthday,loveromance,congratulations,handbouquet,thankyou' where id = 13;
+
+update products set tags =  'aniversary,valentines,sorry,gws,birthday,loveromance,congratulations,handbouquet,thankyou' where id = 14;
+
+update products set tags =  'valentines,sorry,gws,birthday,loveromance,congratulations,handbouquet,sympathy,thankyou' where id = 15;
+
+update products set tags =  'aniversary,valentines,sorry,gws,birthday,loveromance,congratulations,sympathy,thankyou' where id = 16;
+
+update products set tags =  'valentines,sorry,gws,birthday,loveromance,congratulations,handbouquet,sympathy,thankyou' where id = 17;
+
+update products set tags =  'aniversary,valentines,sorry,gws,birthday,loveromance,congratulations,handbouquet,thankyou' where id = 18;
+
+update products set tags =  'aniversary,valentines,birthday,loveromance,congratulations,handbouquet' where id = 19;
+
+update products set tags =  'aniversary,valentines,gws,birthday,loveromance,congratulations,handbouquet,thankyou' where id = 20;
+
+update products set tags =  'sorry,gws,birthday,congrats,thankyou,handbouquet,valentines' where id = 21;
+
+update products set tags =  'sympathy,gws,birthday,congrats,thankyou,handbouquet' where id = 22;
+
+update products set tags =  'aniversary,valentines,gws,birthday,loveromance,congratulations,handbouquet,sympathy,thankyou' where id = 23;
+
+update products set tags =  'valentines,sorry,gws,birthday,loveromance,congratulations,handbouquet,sympathy,thankyou' where id = 24;
+
+update products set tags =  'aniversary,valentines,birthday,loveromance,handbouquet,thankyou' where id = 25;
+
+********************************************
+============== Drop addons and save new ones
+
+INSERT INTO `addons` (`id`, `type`, `description`, `price`, `created_at`, `updated_at`, `image`, `vendor_id`) VALUES
+(2, 'card', 'birthday card ', 32.00, '2014-09-13 03:15:57', '2014-09-13 03:15:57', 'img/addons/2014-09-13-08:45:56-1gc.jpg', '4'),
+(3, 'card', 'Card 2', 30.00, '2014-09-13 03:34:41', '2014-09-13 03:34:41', 'img/addons/2014-09-13-09:04:40-2gc.jpg', '4'),
+(4, 'cake', 'Cake 1', 250.00, '2014-09-13 03:34:59', '2014-09-13 03:34:59', 'img/addons/2014-09-13-09:04:59-1c.jpg', '4'),
+(5, 'cake', 'Cake 2', 450.00, '2014-09-13 03:35:21', '2014-09-13 03:35:21', 'img/addons/2014-09-13-09:05:21-2c.jpg', '4'),
+(6, 'cake', 'Cake 3', 700.00, '2014-09-13 03:36:06', '2014-09-13 03:36:06', 'img/addons/2014-09-13-09:06:06-5c.jpg', '4'),
+(8, 'baloons', 'Ballon set 3', 30.00, '2014-09-13 03:36:53', '2014-09-13 03:36:53', 'img/addons/2014-09-13-09:06:52-4b.jpg', '4');
+
+********************************************
+
+DELETE FROM products WHERE id = 26;
+DELETE FROM categories WHERE id = 15;
+DELETE FROM  prodvenrelations where premium_price = 0;
+
+alter table users add rmn varchar(15) not null;
+
+UPDATE users SET rmn = '9879606658' WHERE id =6;
+UPDATE users SET rmn = '9941774776' WHERE id =7;
+UPDATE users SET rmn = '9032939291' WHERE id =8;
+UPDATE users SET rmn = '7837000126' WHERE id =9;
+UPDATE users SET rmn = '7381947670' WHERE id =10;
+UPDATE users SET rmn = '9914117377' WHERE id =11;
+UPDATE users SET rmn = '9952309333' WHERE id =12;
+UPDATE users SET rmn = '9008514723' WHERE id =14;
+UPDATE users SET rmn = '9826216882' WHERE id =18;
+UPDATE users SET rmn = '9888080611' WHERE id =19;
+UPDATE users SET rmn = '9845777240' WHERE id =20;
+UPDATE users SET rmn = '9826724733' WHERE id =21;
+UPDATE users SET rmn = '9833342751' WHERE id =22;
+UPDATE users SET rmn = '9293112244' WHERE id =41;
+UPDATE users SET rmn = '9921746023' WHERE id =42;
+UPDATE users SET rmn = '7408929007' WHERE id =43;
+UPDATE users SET rmn = '9872021300' WHERE id =44;
+UPDATE users SET rmn = '7354579875' WHERE id =45;
+UPDATE users SET rmn = '9228189522' WHERE id =46;
+UPDATE users SET rmn = '9839201701' WHERE id =47;
+UPDATE users SET rmn = '7566687878' WHERE id =48;
+UPDATE users SET rmn = '9847156254' WHERE id =49;
+UPDATE users SET rmn = '9846059926' WHERE id =50;
+UPDATE users SET rmn = '9319109040' WHERE id =51;
+UPDATE users SET rmn = '9045001311' WHERE id =53;
+UPDATE users SET rmn = '9425158373' WHERE id = 54;
+UPDATE users SET rmn = '8888851919' WHERE id = 55;
+UPDATE users SET rmn = '9713070403' where id = 56;
+UPDATE users SET rmn = '7556455890' where id = 57;
+UPDATE users SET rmn = '9826216882' where id = 58;
+UPDATE users SET rmn = '7676944406' where id = 59;
+UPDATE users SET rmn = '8447442663' where id = 60;
+UPDATE users SET rmn = '9334944779' where id = 61;
+UPDATE users SET rmn = '9444120346' where id = 63;
+UPDATE users SET rmn = '9929098413' where id = 64;
+UPDATE users SET rmn = '9958408111' where id = 65;
+UPDATE users SET rmn = '9998948065' where id = 66;
+UPDATE users SET rmn = '9663388036' where id = 67;
+UPDATE users SET rmn = '9860081231' where id = 68;
+UPDATE users SET rmn = '9823134470' where id = 69;
+UPDATE users SET rmn = '9210400333' where id = 70;
+UPDATE users SET rmn = '9422044833' where id = 71;
+UPDATE users SET rmn = '9830225659' where id = 72;
+UPDATE users SET rmn = '9992002926' where id = 73;
+UPDATE users SET rmn = '7600543066' where id = 74;
+UPDATE users SET rmn = '9837024919' where id = 75;
+UPDATE users SET rmn = '9824014229' where id = 76;
+UPDATE users SET rmn = '9879555563' where id = 77;
+UPDATE users SET rmn = '9219562992' where id = 78;
+UPDATE users SET rmn = '9843023440' where id = 79;
+UPDATE users SET rmn = '9835547599' where id = 80;
+UPDATE users SET rmn = '9825695195' where id = 81;
+UPDATE users SET rmn = '9824014229' where id = 82;
+UPDATE users SET rmn = '9795093361' where id = 83;
+UPDATE users SET rmn = '9326688310' where id = 84;
+
+alter table orders add user_message varchar(455);
+alter table ordermasters add email varchar(100);
+update coupons set `parent_id` = "Free Recharge" where `code` like "%FRCLF%";
+update coupons set `parent_id` = "PayTm" where `code` like "%PTMLF%";
+
+alter table orders add type varchar(30) default "flower";
+
+UPDATE `categories` SET `name` = 'Anniversary' WHERE `categories`.`id` = 4; 
+
+
+alter table users add  rate_upraised int(4) default 0;
