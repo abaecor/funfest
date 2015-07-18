@@ -102,7 +102,7 @@
                   </a> 
                 </li>
               @else
-                <li> <a href="#"> <span class="hidden-xs">Comin soon...</span> </a> </li>
+                <li> <a href="#"> <span class="hidden-xs">Coming soon...</span> </a> </li>
               @endif  
             </ul>
           </div>
@@ -205,7 +205,7 @@
             @foreach($catnav as $cat)
               
               <?php 
-                if($cat['name'] == 'Anniversary'){
+                if($cat['name'] == 'Aniversary'){
                     $src = '/img/aniversary.png';
                 }elseif($cat['name'] == 'Valentines'){
                     $src = '/img/vd.png';
