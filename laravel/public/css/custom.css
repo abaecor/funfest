@@ -369,9 +369,10 @@ g
     width: 25%; 
 }
 .logo {
-    left: 46%;
+    left: 40%;
     position: absolute;
     top: 0%;
+    margin-top: 16px;
     z-index: 1001;
 }
 .logo img{
