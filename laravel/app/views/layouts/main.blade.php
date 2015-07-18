@@ -102,7 +102,7 @@
                   </a> 
                 </li>
               @else
-                <li> <a href="#"> <span class="hidden-xs">Make some one smile today</span> </a> </li>
+                <li> <a href="#"> <span class="hidden-xs">Comin soon...</span> </a> </li>
               @endif  
             </ul>
           </div>
