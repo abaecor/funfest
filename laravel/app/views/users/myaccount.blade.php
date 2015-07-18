@@ -5,7 +5,7 @@
       <h1 class="section-title-inner"><span><i class="fa fa-unlock-alt"></i> My account </span></h1>
       <div class="row userInfo">
         <div class="col-xs-12 col-sm-12">
-          <h2 class="block-title-2"><span>Welcome to little florist. Here you can manage all of your personal information and orders.</span></h2>
+          <h2 class="block-title-2"><span>Welcome to Funfest. Here you can manage all of your personal information and orders.</span></h2>
           <ul class="myAccountList row">
             <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4  text-center ">
               <div class="thumbnail equalheight" style="height: 116px;"> 

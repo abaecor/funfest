@@ -41,7 +41,7 @@ class UsersController extends BaseController{
 	
 			Mail::send('emails.welcome', array(), function($message)
 			{
-			    $message->from('care@littleflorist.com', 'Littleflorist');
+			    $message->from('care@Funfest.com', 'Funfest');
 			    $message->to(Input::get('email'));
 			});
 
@@ -67,7 +67,7 @@ class UsersController extends BaseController{
 
 			Mail::send('emails.update', array(), function($message)
 			{
-			    $message->from('care@littleflorist.com', 'Littleflorist');
+			    $message->from('care@Funfest.com', 'Funfest');
 
 			    $message->to(Input::get('email'));
 

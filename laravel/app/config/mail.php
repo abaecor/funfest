@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'care@littleflorist.com', 'name' => 'Little Florist'),
+	'from' => array('address' => 'care@Funfest.com', 'name' => 'Funfest'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => '',//'care@littleflorist.com',
+	'username' => '',//'care@Funfest.com',
 
 	/*
 	|--------------------------------------------------------------------------

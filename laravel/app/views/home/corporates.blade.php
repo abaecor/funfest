@@ -8,7 +8,7 @@
 <div class="staticpages">
 	<span class="terms-text">Corporate gifting:</span>
 	<br/>
-	Little Florist offers corporate gifting services to provide your company with gifting solutions which are not only innovative but also personalized.
+	Funfest offers corporate gifting services to provide your company with gifting solutions which are not only innovative but also personalized.
 	<br/>
 	We deliver quality flowers with chocolates, cakes and gifts across India at highly affordable rates so wherever your client, customer or employee might be, we will deliver!
 	<br/>
@@ -16,7 +16,7 @@
 	<br/>
 	We offer seamless monthly/bi-weekly billing. For us customer satisfaction is paramount because we ensure that no stone is left unturned in meeting your expectations.
 	<br/>
-	By choosing Littleflorist.com, you are guaranteed professionalism, speedy delivery, quality arrangements and great service.
+	By choosing Funfest.com, you are guaranteed professionalism, speedy delivery, quality arrangements and great service.
 	<div class="center">
 		<img src="/img/franchise/BT.jpg">
 		<img src="/img/franchise/PP.jpg">

@@ -64,11 +64,11 @@
 		From 			: {{ $billing_det['first_name']." ".$billing_det['last_name'] }}<br/>
 		
 		<br/><br/>
-		For order details go to little florist and track your order to update the order.
+		For order details go to Funfest and track your order to update the order.
 		<br/>
 		Thanks,<br/>
-		Little florist Family<br/>
-		care@littleflorist.com<br/>	
-		<img src="http://www.littleflorist.com/images/logo.jpg"/>
+		Funfest Family<br/>
+		care@Funfest.com<br/>	
+		<img src="http://www.Funfest.com/images/logo.jpg"/>
 </body>
 </html>

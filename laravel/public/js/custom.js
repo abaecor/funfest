@@ -179,7 +179,7 @@ $(document).ready(function() {
       }); 
     });
 
-    // var shaObj = new jsSHA("C0Dr8m|544f12804fa68|600.00|SAU Admission 2014|Vikas|techwarrior@littleflorist.com|||||||||||3sf0jURk", "ASCII");
+    // var shaObj = new jsSHA("C0Dr8m|544f12804fa68|600.00|SAU Admission 2014|Vikas|techwarrior@Funfest.com|||||||||||3sf0jURk", "ASCII");
     // var hash = shaObj.getHash("SHA-512", "HEX");
 
     $('.cbx_copy').click(function(){

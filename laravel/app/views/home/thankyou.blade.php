@@ -5,7 +5,7 @@
 
 <div class="col-sm-12">
 	<h1 class="text-center special">Thank You For Your Purchase<br>
- 	 <span style="font-size:18px; text-transform:lowercase"> If you  have any problems, queries, bugs, issues, requests or need any help then email me at <a href="mailto:care@littleflorist.com">care@littleflorist.com</a></span> </h1>
+ 	 <span style="font-size:18px; text-transform:lowercase"> If you  have any problems, queries, bugs, issues, requests or need any help then email me at <a href="mailto:care@Funfest.com">care@Funfest.com</a></span> </h1>
 </div>
 
 @stop

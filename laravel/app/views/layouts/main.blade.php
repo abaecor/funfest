@@ -18,7 +18,7 @@
 <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
 <link href='http://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
 <link rel="shortcut icon" href="/ico/favicon.png">
-<title>Little Florist - send flowers to all cities in India</title>
+<title>Funfest - send flowers to all cities in India</title>
 <meta name="description" content="send flowers across india gift flowers">
 <meta name="keywords" content="flowers ,cake,florists,gifts, online, delivery, bouquet, india, delhi, bangalore, mumbai">
 <!-- Bootstrap core CSS -->
@@ -132,8 +132,8 @@
      <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only"> Toggle navigation </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> <span class="icon-bar"> </span> </button>
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-cart"> <i class="fa fa-shopping-cart colorWhite"> </i> <span class="cartRespons colorWhite"> Cart  Rs. {{ Cart::total() }}</span> </button>
-      <a class="navbar-brand " href="/"> Little Florist </a> 
-      <!-- <img src="" alt="Little Florist"> -->
+      <a class="navbar-brand " href="/"> Funfest </a> 
+      <!-- <img src="" alt="Funfest"> -->
       
       <!-- this part for mobile -->
       <div class="search-box pull-right hidden-lg hidden-md hidden-sm">
@@ -386,8 +386,8 @@
           <h3> Support </h3>
           <ul>
             <li class="supportLi">
-              <p> Littleflorist at your service </p>
-              <h4> <a href="mailto:care@littleflorist.com" class="inline"> <i class="fa fa-envelope-o"> </i> care@littleflorist.com </a> </h4>
+              <p> Funfest at your service </p>
+              <h4> <a href="mailto:care@Funfest.com" class="inline"> <i class="fa fa-envelope-o"> </i> care@Funfest.com </a> </h4>
             </li>
           </ul>
           @if(Session::get('user_status') != 'vendor')
@@ -423,7 +423,7 @@
             </li>
           </ul>
           <hr style="margin-bottom:10px;" />
-          <h3> Little Florist </h3>
+          <h3> Funfest </h3>
           <ul>
             <li> <a href="/home/aboutus"> About Us </a> </li>
             <li> <a href="/home/faq"> Faq </a> </li>
@@ -446,7 +446,7 @@
             </li>
           </ul>
           <ul class="social">
-            <li> <a href="http://facebook.com/littleflorist"> <i class=" fa fa-facebook"> &nbsp; </i> </a> </li>
+            <li> <a href="http://facebook.com/Funfest"> <i class=" fa fa-facebook"> &nbsp; </i> </a> </li>
             <li> <a href="http://twitter.com/lilflorist"> <i class="fa fa-twitter"> &nbsp; </i> </a> </li>
             <!-- <li> <a href="http://youtube.com"> <i class="fa fa-pinterest"> &nbsp; </i> </a> </li> -->
           </ul>
@@ -454,7 +454,7 @@
         <div class="col-lg-4  col-md-4 col-sm-6 col-xs-12 ">
           <h3 class="instahead">Facebook News</h3>
               <div class="facebook_cont smclass">
-                <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Flittleflorist&width=617&colorscheme=light&show_faces=false&show_border=false&stream=true&header=false&height=900" scrolling="yes" style="border:1px solid #CCC; border-top:none; overflow:hidden; width:390px; height:430px; background: white; float:left; " allowtransparency="true" frameborder="0"></iframe>
+                <iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2FFunfest&width=617&colorscheme=light&show_faces=false&show_border=false&stream=true&header=false&height=900" scrolling="yes" style="border:1px solid #CCC; border-top:none; overflow:hidden; width:390px; height:430px; background: white; float:left; " allowtransparency="true" frameborder="0"></iframe>
                 <!-- <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fclubwebsite&amp;width=600&amp;height=800&amp;colorscheme=light&amp;show_faces=false&amp;header=false&amp;stream=true&amp;show_border=false&amp;appId=313784812114242" scrolling="yes" frameborder="0" style="border:none; overflow:hidden; width:600px; height:800px;" allowTransparency="true"></iframe> -->
                 </div>
               <!-- SnapWidget -->
@@ -473,7 +473,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
-        <h3 class="modal-title-site text-center" > Login to Little Florist </h3>
+        <h3 class="modal-title-site text-center" > Login to Funfest </h3>
       </div>
       <div class="modal-body">
         {{ Form::open(array('url'=>'/users/signin')) }}
@@ -523,7 +523,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times; </button>
-        <h3 class="modal-title-site text-center" > Login to Little Florist </h3>
+        <h3 class="modal-title-site text-center" > Login to Funfest </h3>
       </div>
       <div class="modal-body">
         {{ Form::open(array('url'=>'/users/signin')) }}

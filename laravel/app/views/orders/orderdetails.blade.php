@@ -49,7 +49,7 @@
 	<h4 class="orderinfocaps"><a href="/"><i class="fa fa-chevron-left"></i> Back to shopping </a></h4>
 @else
 	<div style="text-align:center;">
-	<h3>Order id incorrect/could not be found. Please mail us at <i>care@littleflorist.com</i> for further details.</h3>
+	<h3>Order id incorrect/could not be found. Please mail us at <i>care@Funfest.com</i> for further details.</h3>
 	</div>
 @endif
 @stop

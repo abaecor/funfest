@@ -9,7 +9,7 @@
 $host = "localhost";
 $username = "root";
 $password = "root";
-$dbname = "littleflorist";
+$dbname = "Funfest";
 
 $db = mysql_connect($host,$username,$password);
 
@@ -38,12 +38,12 @@ while ($temp = mysql_fetch_array($res))
 
 			Dear vendor,<p/>
 					This is a reminder mail to notify you that your order number ".$oid." is still not yet initiated.<br/>
-					Please can you check and verify the order details at littleflorist.com and initiate the process.<br/><br/>
+					Please can you check and verify the order details at Funfest.com and initiate the process.<br/><br/>
 
-			Happy vendoring with little florist.<br/>
+			Happy vendoring with Funfest.<br/>
 
 			Thanks,<br/>
-			care@littleflorist.com <br/>";
+			care@Funfest.com <br/>";
    		mail($t['email'], 'New order reminder', $message);
    }
 }

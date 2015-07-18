@@ -30,9 +30,9 @@ class HomeController extends BaseController {
 		Session::flash('message', 'Sorry, the transaction failed due to some internal erros. Please try again.'); 
 		$products = Cart::contents();
 		Mail::send('emails.orderfailed', array('products'=>$products), function($message){
-		    $message->from('care@littleflorist.com', 'Littleflorist');
+		    $message->from('care@Funfest.com', 'Funfest');
 		    $message->to($_POST['email']);
-		    $message->subject('RE: Order Failed, Little Florist');
+		    $message->subject('RE: Order Failed, Funfest');
 		});
 
 		$username = "thevikin";
@@ -133,24 +133,24 @@ class HomeController extends BaseController {
 			
 			// Notify user for successfull payment
 			Mail::send('emails.orderconfirm', array('details_for_order'=>$order_info,'products'=>$products,'total' => $total), function($message) use ($order_info,$billing_det){
-			    $message->from('care@littleflorist.com', 'Littleflorist');
-			    $message->subject('RE: Order successful, Little Florist order no. '.$order_info['txnid']);
+			    $message->from('care@Funfest.com', 'Funfest');
+			    $message->subject('RE: Order successful, Funfest order no. '.$order_info['txnid']);
 			    $message->to($billing_det['email']);
 			});
 
 			$vendor_email = User::getemail($vendor_id);
-			$vendor_email = "techwarrior@littleflorist.com";
+			$vendor_email = "techwarrior@Funfest.com";
 			if($vendor_email != ""){
 				Mail::send('emails.vendornotify', array('details_for_order'=>$order_info,'products'=>$products,'total' => $total), function($message) use ($order_info,$billing_det,$vendor_email){
-					$message->from('care@littleflorist.com', 'Littleflorist');
-					$message->subject('RE: Order successful, Little Florist order no. '.$order_info['txnid']);
-					$message->to( $vendor_email );//->cc('care@littleflorist.com');
+					$message->from('care@Funfest.com', 'Funfest');
+					$message->subject('RE: Order successful, Funfest order no. '.$order_info['txnid']);
+					$message->to( $vendor_email );//->cc('care@Funfest.com');
 				});
 			} else {
 				Mail::send('emails.vendornotify', array('details_for_order'=>$order_info,'products'=>$products,'total' => $total), function($message) use ($billing_det){
-					$message->from('care@littleflorist.com', 'Littleflorist');
+					$message->from('care@Funfest.com', 'Funfest');
 					$message->subject('RE: Order for cake (vendor email was null).');
-					$message->to('care@littleflorist.com');
+					$message->to('care@Funfest.com');
 				});
 			}
 
@@ -209,15 +209,15 @@ class HomeController extends BaseController {
 		$products = Cart::contents();
 		$details_for_order = $_POST;
 		Mail::send('emails.ordercancel', array('products'=>$products,'details_for_order'=>$details_for_order), function($message){
-		    $message->from('care@littleflorist.com', 'Littleflorist');
+		    $message->from('care@Funfest.com', 'Funfest');
 		    $message->to($_POST['email']);
-		    $message->subject('RE: Order Cancellation, Little Florist');
+		    $message->subject('RE: Order Cancellation, Funfest');
 		});
 
 		$username = "thevikin";
 		$password = "185473";
 		$url = "http://smslane.com/vendorsms/pushsms.aspx?user=".$username."&password=".$password."&msisdn=91".$_POST['phone'].
-			   "&sid=WebSms&msg=Your order has been cancelled. Avail exciting prices and discount on numerous products at Little Florist.&fl=1";
+			   "&sid=WebSms&msg=Your order has been cancelled. Avail exciting prices and discount on numerous products at Funfest.&fl=1";
 
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
@@ -648,7 +648,7 @@ Array
     [state] => Gujarat
     [country] => 
     [zipcode] => 
-    [email] => techwarrior@littleflorist.com
+    [email] => techwarrior@Funfest.com
     [phone] => 9033556241
     [udf1] => 25
     [udf2] => 

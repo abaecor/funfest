@@ -53,8 +53,8 @@
 		The order has been cancelled from our end. Please let us know if there is anything else you need assistance with.<br/><br/>
 
 		Thanks,<br/>
-		Little florist Family<br/>
-		care@littleflorist.com<br/>	
-		<img src="http://www.littleflorist.com/images/logo.jpg"/>
+		Funfest Family<br/>
+		care@Funfest.com<br/>	
+		<img src="http://www.Funfest.com/images/logo.jpg"/>
 </body>
 </html>

@@ -115,7 +115,7 @@ class OrdersController extends BaseController {
 			$vendor_email = User::getemail($vendor_id[0]['vendor_id']);
 
 			Mail::send('emails.orderstatus', array('msg'=>$msg), function($message) use ($vendor_email){
-				$message->from('care@littleflorist.com', 'Littleflorist');
+				$message->from('care@Funfest.com', 'Funfest');
 				$message->subject('RE: Order status updated');
 				$message->to($vendor_email);
 			});

@@ -42,7 +42,7 @@ class BaseController extends Controller {
 					View::share('user_id', uniqid());
 				}
 			// }else{
-			// 	 return Redirect::to('http://www.littleflorist.com');
+			// 	 return Redirect::to('http://www.Funfest.com');
 			// }
 		});
 	}	
